@@ -39,7 +39,8 @@ const BlogList = () => {
   const [post, setPost] = useState(blogs);
 
   const handleDeleteBlog = (id) => {
-    const blogDelete = post.filter((_,i) => i !== id);
+    const blogDelete = post.filter((blog) => blog.id !== id);
+    console.log(blogDelete)
     setPost(blogDelete);
   }
 
