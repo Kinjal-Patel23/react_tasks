@@ -1,7 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import BlogList from './components/BlogList'
-import FirstBlog from './pages/FirstBlog'
+import BlogPage from './pages/BlogPage'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<BlogList/>}/>
-          <Route path='/blog/:id' element={<FirstBlog/>}/>
+          <Route path='/blog/:id' element={<BlogPage/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </>
