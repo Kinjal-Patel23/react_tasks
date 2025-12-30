@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const App = () => {
-
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     fetch(" https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setUserData(data);
-      })
+      });
   }, []);
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 p-8">
+      <div className="min-h-screen bg-linear-to-br from-slate-100 to-slate-200 p-8">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
           User List
         </h1>
@@ -26,7 +24,7 @@ const App = () => {
               key={user.id}
               className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-t-2xl"></div>
+              <div className="h-20 bg-linear-to-r from-indigo-500 to-purple-500 rounded-t-2xl"></div>
 
               <div className="absolute top-10 left-6">
                 <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md">
@@ -41,9 +39,7 @@ const App = () => {
                   {user.name}
                 </h2>
 
-                <p className="text-sm text-gray-500 mb-4">
-                  @{user.username}
-                </p>
+                <p className="text-sm text-gray-500 mb-4">@{user.username}</p>
 
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>
@@ -60,7 +56,8 @@ const App = () => {
 
                   <p>
                     <span className="font-medium">Address:</span>{" "}
-                    {user.address.street}, {user.address.city}, {user.address.zipcode}
+                    {user.address.street}, {user.address.city},{" "}
+                    {user.address.zipcode}
                   </p>
 
                   <p className="pt-2 font-medium text-indigo-600">
@@ -73,7 +70,7 @@ const App = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
