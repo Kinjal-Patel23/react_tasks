@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Portfolio from "./component/Portfolio";
 
 const App = () => {

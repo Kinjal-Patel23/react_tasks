@@ -1,4 +1,3 @@
-import React from "react";
 import profile from "../assets/profile_img.jpeg";
 
 const Portfolio = ({ bio }) => {
@@ -13,7 +12,7 @@ const Portfolio = ({ bio }) => {
         <h1>My Portfolio</h1>
         <img
           src={aboutMe.photo}
-          alt="img"
+          alt="profileImg"
           style={{ width: "200px", height: "200px" }}
         />
         <h1>{aboutMe.name}</h1>
