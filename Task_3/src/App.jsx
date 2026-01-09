@@ -1,11 +1,11 @@
-import BlogList from "./components/BlogList";
+import Blog from './pages/Blog'
 
 const App = () => {
   return (
-    <>
-      <BlogList />
-    </>
-  );
-};
+    <div>
+      <Blog />
+    </div>
+  )
+}
 
-export default App;
+export default App
