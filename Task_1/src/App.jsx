@@ -1,14 +1,16 @@
-import Portfolio from "./component/Portfolio";
+import Portfolio from './component/Portfolio'
+import myPhoto from './assets/profile_img.jpeg'
 
 const App = () => {
-  const bio =
-    "My Name is Kinjal Kaneriya. I have completed my BCA and I have also completed Full stack development classes at Red and White Institute";
-
   return (
     <>
-      <Portfolio bio={bio} />
+      <Portfolio
+        name='Kinjal Kaneriya'
+        bio='I am Kinjal Kaneriya. I have completed my BCA and currently I am MERN stack developer'
+        photo={myPhoto}
+      />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
